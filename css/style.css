@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "mogra";
+  src: url("../font/Mogra-Regular.ttf");
+}
+* {
+  font-family: mogra !important;
+}
+.container-fluid {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #74ebd5;
+  background-image: linear-gradient(103deg, #74ebd5 0%, #9face6 100%);
+}
+.cartoona {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  background: rgba(36, 14, 63, 0.8);
+  border-radius: 3rem;
+  font-size: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.dot,
+.hours,
+.date,
+.clockArrows {
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.day,
+.month,
+.year,
+.second,
+.minutes,
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.redPoint {
+  width: 3rem;
+  height: 6rem;
+  background-color: tomato;
+}
+.redPoint2 {
+  width: 1rem;
+  height: 35rem;
+  background-color: white;
+  position: absolute;
+}
+.redPoint2:nth-child(1) {
+  transform: rotate(0deg);
+}
+.redPoint2:nth-child(2) {
+  transform: rotate(30deg);
+}
+.redPoint2:nth-child(3) {
+  transform: rotate(60deg);
+}
+.redPoint2:nth-child(4) {
+  transform: rotate(90deg);
+}
+.redPoint2:nth-child(5) {
+  transform: rotate(120deg);
+}
+.redPoint2:nth-child(6) {
+  transform: rotate(150deg);
+}
+.redPoint2:nth-child(7) {
+  transform: rotate(180deg);
+}
+.redPoint2:nth-child(8) {
+  transform: rotate(210deg);
+}
+.redPoint2:nth-child(9) {
+  transform: rotate(240deg);
+}
+.redPoint2:nth-child(10) {
+  transform: rotate(270deg);
+}
+.redPoint2:nth-child(11) {
+  transform: rotate(300deg);
+  display:none;
+}
+.redPoint2:nth-child(12) {
+  transform: rotate(330deg);
+}
+.redPoint {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.redPoint span {
+  animation: ups 1s ease-in-out infinite alternate;
+}
+.parentDate div {
+  color: rgb(190, 220, 229);
+}
+@keyframes ups {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.circle, .circle2 {
+  width: 30rem;
+  height: 30rem;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 12s ease-in-out infinite;
+  transform: rotate(150deg);
+}
+.circle2{
+  background-color: #3A315F;
+}
+@media screen and (max-width: 767px) {
+  .cartoona {
+    font-size: 1rem;
+  }
+  .redPoint {
+    width: 1.5rem;
+    height: 3rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(60deg);
+  }
+  30% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(150deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(210deg);
+  }
+  80% {
+    transform: rotate(240deg);
+  }
+  90% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
+}
